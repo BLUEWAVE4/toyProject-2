@@ -44,32 +44,136 @@
     </style>
 </head>
 
-<body>
+<body class="bg-gray-50">
     <!-- 네비 영역 -->
     <header>
         <!-- 컨테이너 -->
-        <div>
+        <div class="mx-auto max-w-[1440px] mt-4">
             <!-- 검색창 영역 -->
-            <div>
+            <div class="flex justify-between">
                 <!-- 검색창 - 좌측 -->
-                <div class="w-[25vw]">
+                <div class="w-[25vw] flex gap-5">
                     <img src="/assets/img/header-searchbar-main-logo.png" alt="OLO 로고">
-                    <div class="bg-gray-300 rounded-4xl w-full h-9">
-                        <p>선물 같은 홀리데이 혜택 (~12/25)</p>
+                    <div
+                        class="bg-gray-200/60 rounded-4xl w-full min-w-[330px] h-10 flex justify-between items-center p-4">
+                        <div class="text-gray-400/60 font-medium tracking-tighter text-[12px] whitespace-nowrap">선물 같은
+                            홀리데이 혜택 (~12/25)
+                        </div>
                         <!-- 돋보기 아이콘 -->
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                                 stroke-linejoin="round" aria-hidden="true">
                                 <circle cx="11" cy="11" r="7"></circle>
                                 <path d="M20 20l-3.6-3.6"></path>
-                            </svg></span>
+                            </svg>
+                        </span>
                     </div>
                 </div>
                 <!-- 검색창 - 우측 -->
-                <div></div>
+                <div class="flex gap-3">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="
+    M12 20
+    C10 18.5 5 15 5 9
+    C5 6.8 6.6 5.2 8.8 5.2
+    C10.2 5.2 11.4 5.9 12 7
+    C12.6 5.9 13.8 5.2 15.2 5.2
+    C17.4 5.2 19 6.8 19 9
+    C19 15 14 18.5 12 20
+    Z" />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 7h12l-1 13H7L6 7z" />
+                            <path d="M9 7V6a3 3 0 0 1 6 0v1" />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="3" />
+                            <path d="M5 19c0-3.3 3.1-6 7-6s7 2.7 7 6" />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                            <path d="M16 17l5-5-5-5" />
+                            <path d="M21 12H9" />
+                        </svg>
+                    </span>
+
+
+
+                </div>
             </div>
             <!-- 네비 메뉴바 -->
-            <nav> </nav>
+            <nav class="mt-6 flex justify-between">
+                <!-- 네비 메뉴바 : 좌측 -->
+                <div class="flex items-center">
+                    <span>
+                        <!-- Hamburger icon (outline) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-label="menu" role="img">
+                            <path d="M4 6h16" />
+                            <path d="M4 12h16" />
+                            <path d="M4 18h16" />
+                        </svg>
+                    </span>
+                    <span class="text-gray-500">
+                        <!-- Vertical divider / bar icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="15" viewBox="0 0 4 24" fill="none">
+                            <line x1="2" y1="2" x2="2" y2="22" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </span>
+                    <ul class="flex gap-3 font-semibold text-gray-500/90 text-[1.1rem] tracking-tighter">
+                        <li>
+                            <a class="text-lime-600/70 text-[1.2rem] whitespace-nowrap" href="">홀리데이</a>
+                            <span class="absolute w-1 h-1 bg-lime-600/70 translate-x-0.5 rounded-2xl"></span>
+                        </li>
+                        <li>
+                            <a class="font-bold text-black">홈</a>
+                        </li>
+                        <li>
+                            <a href="">남성</a>
+                        </li>
+                        <li>
+                            <a href="">여성</a>
+                        </li>
+                        <li>
+                            <a href="">스포츠/골프</a>
+                        </li>
+                        <li>
+                            <a href="">셀렉티드</a>
+                        </li>
+                        <li>
+                            <a href="">라이프</a>
+                        </li>
+                        <li>
+                            <a href="">아울렛</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 네비 메뉴바 : 우측 -->
+                <div>
+                    <ul class="flex gap-3 tracking-tighter text-sm font-semibold text-gray-500/70">
+                        <li>브랜드</li>
+                        <li>타임딜</li>
+                        <li>기획전</li>
+                        <li>이벤트</li>
+                        <li>랭킹</li>
+                        <li>신상품</li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
 
@@ -77,14 +181,114 @@
         <!-- 컨테이너 -->
         <div>
             <!-- 히어로 영역 래퍼-->
-            <div>
+            <div class="my-6">
                 <!-- 배너 영역 [1/2] -->
                 <div>
-
+                    <!-- 이미지 슬라이드 트랙 -->
+                    <ul class="w-[400%] flex overflow-x-auto">
+                        <!-- 슬라이드1 -->
+                        <li class="relative">
+                            <!-- 배너 이미지 -->
+                            <img class="aspect-square[3/4] w-[400px]" src="./assets/img/hero-banner-01.webp" alt="">
+                            <!-- 텍스트 -->
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p class="font-bold">골든베어</p>
+                                <h2 class="leading-tight my-2 font-extrabold">라운딩을 위한 <br> 카운트다운</h2>
+                                <p>전 상품 추가 12% 쿠폰</p>
+                            </div>
+                        </li>
+                        <!-- 슬라이드2 -->
+                        <li class="relative">
+                            <!-- 배너 이미지 -->
+                            <img class="aspect-square[3/4] w-[400px]" src="./assets/img/hero-banner-02.webp" alt="">
+                            <!-- 텍스트 -->
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p>골든베어</p>
+                                <h2 class="leading-tight my-2">라운딩을 위한 <br> 카운트다운</h2>
+                                <p>전 상품 추가 12% 쿠폰</p>
+                            </div>
+                        </li>
+                        <!-- 슬라이드3 -->
+                        <li class="relative">
+                            <!-- 배너 이미지 -->
+                            <img class="aspect-square[3/4] w-[400px]" src="./assets/img/hero-banner-03.webp" alt="">
+                            <!-- 텍스트 -->
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p>골든베어</p>
+                                <h2 class="leading-tight my-2">라운딩을 위한 <br> 카운트다운</h2>
+                                <p>전 상품 추가 12% 쿠폰</p>
+                            </div>
+                        </li>
+                        <!-- 슬라이드4 -->
+                        <li class="relative">
+                            <!-- 배너 이미지 -->
+                            <img class="aspect-square[3/4] w-[400px]" src="./assets/img/hero-banner-04.webp" alt="">
+                            <!-- 텍스트 -->
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p>골든베어</p>
+                                <h2 class="leading-tight my-2">라운딩을 위한 <br> 카운트다운</h2>
+                                <p>전 상품 추가 12% 쿠폰</p>
+                            </div>
+                        </li>
+                        <!-- 슬라이드5 -->
+                        <li class="relative">
+                            <!-- 배너 이미지 -->
+                            <img class="aspect-square[3/4] w-[400px]" src="./assets/img/hero-banner-05.webp" alt="">
+                            <!-- 텍스트 -->
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p>골든베어</p>
+                                <h2 class="leading-tight my-2">라운딩을 위한 <br> 카운트다운</h2>
+                                <p>전 상품 추가 12% 쿠폰</p>
+                            </div>
+                        </li>
+                        <!-- 슬라이드6 -->
+                        <li class="relative">
+                            <!-- 배너 이미지 -->
+                            <img class="aspect-square[3/4] w-[400px]" src="./assets/img/hero-banner-06.webp" alt="">
+                            <!-- 텍스트 -->
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p>골든베어</p>
+                                <h2 class="leading-tight my-2">라운딩을 위한 <br> 카운트다운</h2>
+                                <p>전 상품 추가 12% 쿠폰</p>
+                            </div>
+                        </li>
+                        <!-- 슬라이드7 -->
+                        <li class="relative">
+                            <!-- 배너 이미지 -->
+                            <img class="aspect-square[3/4] w-[400px]" src="./assets/img/hero-banner-06.webp" alt="">
+                            <!-- 텍스트 -->
+                            <div class="absolute bottom-6 left-6 text-white">
+                                <p>골든베어</p>
+                                <h2 class="leading-tight my-2">라운딩을 위한 <br> 카운트다운</h2>
+                                <p>전 상품 추가 12% 쿠폰</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <img src="" alt="">
+                </div>
+                <!-- 컨트롤러 래퍼-->
+                <div class="flex justify-center my-5">
+                    <!-- 트랙 -->
+                    <div class="relative h-0.5 w-[1100px] bg-gray-400/50 my-3">
+                        <!-- 프로그레스 -->
+                        <div class="absolute h-0.5 w-[150px] bg-black top-0 left-0 z-5"></div>
+                    </div>
                 </div>
                 <!-- 서브 네비 아이콘 [2/2] -->
-                <div>
-
+                <div class="max-w-[900px] mx-auto mt-10">
+                    <!-- 서브 래퍼 -->
+                    <ul>
+                        <li class="inline-flex items-center gap-1 bg-gray-500/20 py-1.5 px-2 rounded-4xl">
+                            <div class="h-6 w-6 bg-black rounded-4xl flex items-center justify-center">
+                                <div class="h-4 w-4 bg-amber-200 rounded-3xl flex items-center justify-center">
+                                    <div class="h-3 w-3 bg-black rounded-3xl"></div>
+                                </div>
+                            </div>
+                            <p class="font-semibold">
+                                타임딜
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- 카드상품 영역 래퍼 -->
