@@ -1,7 +1,10 @@
+// 프로그레스
 let progressMove = document.getElementById("progressMove");
 let progressBtnPrev = document.getElementById("progressBtnPrev");
 let progressBtnNext = document.getElementById("progressBtnNext");
 let progressNum = document.getElementById("progressNum");
+
+progressMove.style.transition = "transform 0.2s ease-in-out"
 
 let currentProgressX = 0;
 let currentProgressNum = 3;
@@ -16,19 +19,19 @@ progressBtnNext.addEventListener("click", (e) => {
     const progressNumStep = 3;
     currentProgressNum += progressNumStep;
 
-    progressNum.innerText = currentProgressNum;
+
 
     // 누적px이 1100px을 넘으면 0으로 리셋
     if (currentProgressX > progressStepMax) {
         currentProgressX = 0;
-    }
+    };
 
     progressMove.style.transform = `translateX(${currentProgressX}px)`;
 
-    if (currentProgressNum > 17) {
-        currentProgressNum = 0;
-    }
-
+    if (currentProgressNum > 18) {
+        currentProgressNum = 3;
+    };
+    progressNum.innerText = currentProgressNum;
 });
 
 progressBtnPrev.addEventListener("click", (e) => {
@@ -41,7 +44,7 @@ progressBtnPrev.addEventListener("click", (e) => {
     const progressNumStep = 3;
     currentProgressNum -= progressNumStep;
 
-    progressNum.innerText = currentProgressNum;
+
 
     // 누적px이 0px보다 낮으면 1100으로 리셋
     if (currentProgressX < progressStepMin) {
@@ -50,7 +53,9 @@ progressBtnPrev.addEventListener("click", (e) => {
 
     progressMove.style.transform = `translateX(${currentProgressX}px)`;
 
-    if (currentProgressNum < 4) {
-        currentProgressNum = 21;
+    if (currentProgressNum <= 0) {
+        currentProgressNum = 18;
     }
+
+    progressNum.innerText = currentProgressNum;
 });
