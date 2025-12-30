@@ -51,6 +51,6 @@ progressBtnPrev.addEventListener("click", (e) => {
     progressMove.style.transform = `translateX(${currentProgressX}px)`;
 
     if (currentProgressNum < 4) {
-        currentProgressNum = 21;
+        currentProgressNum = 24;
     }
 });

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>:: 코오롱몰ㅣ클론코딩</title>
 
     <link rel="stylesheet" href="/output.css">
 
@@ -17,6 +17,8 @@
 
     <style>
         :root {
+            --fs-ssm: clamp(0.7rem, 0.4rem + 0.3vw, 0.8rem);
+            --fs-sm: clamp(0.775rem, 0.4rem + 0.4vw, 1rem);
             --fs-xs: clamp(0.575rem, 0.2rem + 0.4vw, 0.8rem);
             --fs-4: clamp(0.875rem, 0.6rem + 0.4vw, 1rem);
             --fs-3: clamp(1rem, 0.7rem + 0.8vw, 1.5rem);
@@ -46,6 +48,14 @@
 
         .banner-xs {
             font-size: var(--fs-xs);
+        }
+
+        .sub-nav-sm {
+            font-size: var(--fs-sm)
+        }
+
+        .product-brand-sm {
+            font-size: var(--fs-ssm)
         }
     </style>
 
@@ -392,10 +402,12 @@
                     <!-- 트랙 -->
                     <div class="relative h-0.5 min-w-[1320px] max-w-[1320px] bg-gray-400/50 my-3">
                         <!-- 프로그레스 -->
-                        <div id="progressMove" class="absolute h-0.5 w-[220px] bg-black top-0 left-0 z-5 translate-x-[px]"></div>
+                        <div id="progressMove"
+                            class="absolute h-0.5 w-[220px] bg-black top-0 left-0 z-5 translate-x-[px]"></div>
                     </div>
                     <div class="flex tracking-tighter items-center gap-1 ml-3">
-                        <a id="progressBtnPrev" class="font-extrabold" href="#"><</a>
+                        <a id="progressBtnPrev" class="font-extrabold" href="#">
+                        </a>
                         <div class="mx-3 flex items-center">
                             <span id="progressNum" class="font-bold">3</span>
                             <span class="mx-1 h-3 w-0.5 bg-gray-500/30"></span>
@@ -407,28 +419,302 @@
                 <!-- 서브 네비 아이콘 [2/2] -->
                 <div class="max-w-[900px] mx-auto mt-10">
                     <!-- 서브 래퍼 -->
-                    <ul>
-                        <li class="inline-flex items-center gap-1 bg-gray-500/20 py-1.5 px-2 rounded-4xl">
+                    <ul class="flex gap-4 justify-center">
+                        <li
+                            class="inline-flex items-center gap-1 bg-gray-500/10 py-1.5 px-2 rounded-4xl cursor-pointer">
                             <div class="h-6 w-6 bg-black rounded-4xl flex items-center justify-center">
                                 <div class="h-4 w-4 bg-amber-200 rounded-3xl flex items-center justify-center">
                                     <div class="h-3 w-3 bg-black rounded-3xl"></div>
                                 </div>
                             </div>
-                            <p class="font-semibold">
+                            <div class="font-semibold sub-nav-sm tracking-tighter">
                                 타임딜
-                            </p>
+                            </div>
+                        </li>
+                        <li
+                            class="inline-flex items-center gap-1 bg-gray-500/10 py-1.5 px-2 rounded-4xl cursor-pointer">
+                            <img class="h-6 w-6 rounded-4xl" src="./assets/img/sub-nav-icon-02.webp" alt="사진">
+                            <div class="font-semibold sub-nav-sm tracking-tighter">
+                                카운트 다운 특가
+                            </div>
+                        </li>
+                        <li
+                            class="inline-flex items-center gap-1 bg-gray-500/10 py-1.5 px-2 rounded-4xl cursor-pointer">
+                            <img class="h-6 w-6 rounded-4xl" src="./assets/img/sub-nav-icon-03.webp" alt="사진">
+                            <div class="font-semibold sub-nav-sm tracking-tighter">
+                                코오롱스포츠
+                            </div>
+                        </li>
+                        <li
+                            class="inline-flex items-center gap-1 bg-gray-500/10 py-1.5 px-2 rounded-4xl cursor-pointer">
+                            <img class="h-6 w-6 rounded-4xl" src="./assets/img/sub-nav-icon-04.webp" alt="사진">
+                            <div class="font-semibold sub-nav-sm tracking-tighter">
+                                시리즈
+                            </div>
+                        </li>
+                        <li
+                            class="inline-flex items-center gap-1 bg-gray-500/10 py-1.5 px-2 rounded-4xl cursor-pointer">
+                            <img class="h-6 w-6 rounded-4xl" src="./assets/img/sub-nav-icon-05.webp" alt="사진">
+                            <div class="font-semibold sub-nav-sm tracking-tighter">
+                                럭키슈에뜨
+                            </div>
+                        </li>
+                        <li
+                            class="inline-flex items-center gap-1 bg-gray-500/10 py-1.5 px-2 rounded-4xl cursor-pointer">
+                            <img class="h-6 w-6 rounded-4xl" src="./assets/img/sub-nav-icon-06.webp" alt="사진">
+                            <div class="font-semibold sub-nav-sm tracking-tighter">
+                                에피그램
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
             <!-- 카드상품 영역 래퍼 -->
-            <div>
+            <div class="max-w-[1400px] mx-auto">
                 <!-- 영역 1 : 연말결산 베스트 상품 -->
+                <!-- 상품리스트 타이틀 -->
                 <div>
-
+                    <h3 class="font-bold mt-20 mb-10">연말결산 베스트 상품</h3>
+                </div>
+                <!-- 상품리스트 메뉴 -->
+                <div>
+                    <ul class="flex gap-2">
+                        <li
+                            class="py-2 px-3 rounded-4xl bg-black text-white text-xs tracking-tighter font-bold cursor-pointer">
+                            남성</li>
+                        <li
+                            class="py-2 px-3 rounded-4xl text-gray-400 text-xs tracking-tighter font-bold cursor-pointer">
+                            여성</li>
+                    </ul>
+                </div>
+                <!-- section1 상품리스트 래퍼 -->
+                <div class="h-screen">
+                    <!-- 이미지 슬라이드 래퍼 -->
+                    <div class="max-w-[1400px] overflow-hidden h-full">
+                        <!-- 이미지 슬라이드 트랙 -->
+                        <ul
+                            class="flex scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none]">
+                            <!-- 상품 1 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-01.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 상품 2 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-02.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 상품 3 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-03.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 상품 4 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-04.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 상품 5 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-05.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 상품 6 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-06.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 상품 7 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-07.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 상품 8 -->
+                            <li class="relative w-[225px] shrink-0 mr-[10px]">
+                                <img class="cursor-pointer rounded-3xl aspect-square w-full h-full pt-4 pb-2"
+                                    src="/assets/img/section1-product-img-07.jpg" alt="상품">
+                                <span class="absolute right-2 bottom-5 text-gray-300 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="
+        M12 20
+        C10 18.5 5 15 5 9
+        C5 6.8 6.6 5.2 8.8 5.2
+        C10.2 5.2 11.4 5.9 12 7
+        C12.6 5.9 13.8 5.2 15.2 5.2
+        C17.4 5.2 19 6.8 19 9
+        C19 15 14 18.5 12 20
+        Z" />
+                                    </svg>
+                                </span>
+                                <div class="product-brand-sm tracking-tighter font-extrabold text-gray-500">견지울른스</div>
+                                <div class="product-brand-sm tracking-tighter font-semibold">세인트피어 페어아일 브이넥 베스트 - 베이지
+                                    <div class="product-brand-price font-extrabold pt-2">
+                                        <span class="mr-1 text-lime-500 font-extrabold">20%</span>
+                                        102,400원
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
+        </div>
         </div>
     </main>
 
@@ -436,9 +722,6 @@
     <footer>
 
     </footer>
-    <script>
-
-    </script>
 </body>
 
 </html>
